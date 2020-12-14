@@ -1,0 +1,3 @@
+Start
+[1] CLASS: model.objects.ghosts.Blinky
+[1] EVENT: model.objects.ghosts.Blinky move from: 5[Y]:2[X] to 5[Y]:3[X]

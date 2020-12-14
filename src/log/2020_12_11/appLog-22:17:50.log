@@ -1,0 +1,12 @@
+Start
+[1] CLASS: model.objects.ghosts.Blinky
+[1] EVENT: model.objects.ghosts.Blinky move from: 5[Y]:2[X] to 5[Y]:3[X]
+[2] CLASS: model.Map
+[2] EVENT: model.Map move from: 5[Y]:3[X] to 5[Y]:4[X]
+[3] CLASS: model.objects.ghosts.Blinky
+[3] EVENT: Object model.objects.pacman.Pacman interacted with model.objects.ghosts.Blinky
+Interaction type: attacked by pacman
+[4] CLASS: model.objects.pacman.Pacman
+[4] EVENT: model.objects.pacman.Pacman lost life -1 [Now]
+[5] CLASS: model.objects.ghosts.Blinky
+[5] EVENT: model.objects.ghosts.Blinky move from: 5[Y]:3[X] to 5[Y]:4[X]

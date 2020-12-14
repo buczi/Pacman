@@ -1,0 +1,13 @@
+Start
+CLASS: model.objects.pacman.Pacman
+EVENT: model.objects.pacman.Pacman move from: 5[Y]:2[X] to 5[Y]:3[X]
+CLASS: model.objects.fruits.SmallFruit
+EVENT: Object model.objects.pacman.Pacman interacted with model.objects.fruits.SmallFruit
+Interaction type: eating Small fruit
+CLASS: model.objects.pacman.Pacman
+EVENT: model.objects.pacman.Pacman move from: 5[Y]:3[X] to 5[Y]:4[X]
+CLASS: model.objects.pacman.Pacman
+EVENT: model.objects.pacman.Pacman lost life -1 [Now]
+CLASS: model.objects.ghosts.Blinky
+EVENT: Object model.objects.pacman.Pacman interacted with model.objects.ghosts.Blinky
+Interaction type: attacked by pacman

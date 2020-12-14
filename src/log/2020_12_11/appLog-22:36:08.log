@@ -1,0 +1,20 @@
+Start
+[1] CLASS: model.objects.pacman.PowerUp
+[1] EVENT: Pacman collected power up : 1[speed] true [dread] 10.0[lastingTime]
+[2] CLASS: model.objects.pacman.Pacman
+[2] EVENT: model.objects.pacman.Pacman move from: 5[Y]:4[X] to 5[Y]:3[X]
+[3] CLASS: model.objects.pacman.Points
+[3] EVENT: Pacman collected points: +0 : 0[POINTS]
+[4] CLASS: model.objects.fruits.SmallFruit
+[4] EVENT: Object model.objects.pacman.Pacman interacted with model.objects.fruits.SmallFruit
+Interaction type: eating Small fruit
+[5] CLASS: model.objects.pacman.Pacman
+[5] EVENT: model.objects.pacman.Pacman move from: 5[Y]:3[X] to 5[Y]:2[X]
+[6] CLASS: model.objects.ghosts.Blinky
+[6] EVENT: Object model.objects.pacman.Pacman interacted with model.objects.ghosts.Blinky
+Interaction type: attacked by pacman
+[7] CLASS: model.objects.ghosts.Blinky
+[7] EVENT: Object model.objects.pacman.Pacman interacted with model.objects.ghosts.Blinky
+Interaction type: die from attack
+[8] CLASS: model.objects.pacman.Points
+[8] EVENT: Pacman collected points: +0 : 0[POINTS]

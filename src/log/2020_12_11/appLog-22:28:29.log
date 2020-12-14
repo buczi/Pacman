@@ -1,0 +1,8 @@
+Start
+[1] CLASS: model.objects.pacman.Pacman
+[1] EVENT: model.objects.pacman.Pacman move from: 5[Y]:4[X] to 5[Y]:3[X]
+[2] CLASS: model.objects.pacman.Points
+[2] EVENT: Pacman collected points: +0 : 0[POINTS]
+[3] CLASS: model.objects.fruits.SmallFruit
+[3] EVENT: Object model.objects.pacman.Pacman interacted with model.objects.fruits.SmallFruit
+Interaction type: eating Small fruit

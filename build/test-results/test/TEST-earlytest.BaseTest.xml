@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="earlytest.BaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-11T21:36:08" hostname="ubuntu-Maciek" time="0.19">
+  <properties/>
+  <testcase name="baseTest" classname="earlytest.BaseTest" time="0.19"/>
+  <system-out><![CDATA[WWWWWWW
+W-----W
+W-WWW-W
+W--WW-W
+WW-WW-W
+W-BfM-W
+WWWWWWW
+WWWWWWW
+W-----W
+W-WWW-W
+W--WW-W
+WW-WW-W
+W-BM--W
+WWWWWWW
+WWWWWWW
+W-----W
+W-WWW-W
+W--WW-W
+WW-WW-W
+W-M---W
+WWWWWWW
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
