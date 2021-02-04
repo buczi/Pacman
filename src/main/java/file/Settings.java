@@ -1,27 +1,30 @@
 package file;
 
+/**
+ * Object containing all information about game objects properties
+ */
 public class Settings {
     //Pacman
     private int speed;
-    private int lives;
+    private final int lives;
 
     //Time
-    private float maxTime;
+    private final float maxTime;
 
     //Ghosts
-    private int bSpeed;
-    private int cSpeed;
-    private int iSpeed;
-    private int pSpeed;
+    private final int bSpeed;
+    private final int cSpeed;
+    private final int iSpeed;
+    private final int pSpeed;
 
     //Fruit
-    private int points;
+    private final int points;
 
     //BigFruit
-    private int bPoints;
-    private int enhancedSpeed;
-    private boolean dread;
-    private float time;
+    private final int bPoints;
+    private final int enhancedSpeed;
+    private final boolean dread;
+    private final float time;
 
     public int getPoints() {
         return points;
@@ -47,49 +50,24 @@ public class Settings {
         return speed;
     }
 
-    public void setSpeed(int speed) {
-        this.speed = speed;
-    }
-
     public int getLives() {
         return lives;
     }
 
-    public void setLives(int lives) {
-        this.lives = lives;
-    }
-
-    public float getMaxTime() {
-        return maxTime;
-    }
-
-    public void setMaxTime(float maxTime) {
-        this.maxTime = maxTime;
-    }
 
     public int getBSpeed() {
         return bSpeed;
     }
 
-    public void setBSpeed(int bSpeed) {
-        this.bSpeed = bSpeed;
-    }
 
     public int getCSpeed() {
         return cSpeed;
-    }
-
-    public void setCSpeed(int cSpeed) {
-        this.cSpeed = cSpeed;
     }
 
     public int getISpeed() {
         return iSpeed;
     }
 
-    public void setISpeed(int iSpeed) {
-        this.iSpeed = iSpeed;
-    }
 
     public Settings(int speed, int lives, float maxTime, int bSpeed,
                     int cSpeed, int iSpeed, int pSpeed, int points,
@@ -112,7 +90,9 @@ public class Settings {
         return pSpeed;
     }
 
-    public void setPSpeed(int pSpeed) {
-        this.pSpeed = pSpeed;
+
+    @Override
+    public String toString() {
+        return this.speed + "\n" + this.lives + "\n" + this.maxTime + "\n";
     }
 }

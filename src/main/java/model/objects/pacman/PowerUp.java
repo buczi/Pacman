@@ -1,16 +1,18 @@
 package model.objects.pacman;
 
 import file.logger.Logger;
-import model.objects.EventLog;
+import model.events.Running;
+import model.events.EventLog;
+import util.Alarm;
+import util.Counter;
 
-public class PowerUp {
+public class PowerUp implements Alarm {
     private int enhancedSpeed;
     private boolean dread;
     private float powerUpTime;
-
-    private boolean active;
+    private Running runningEvent;
     public PowerUp(){
-        this.active = false;
+        this.dread = false;
     }
 
     public PowerUp(int enhancedSpeed, boolean dread, float powerUpTime){
@@ -20,17 +22,18 @@ public class PowerUp {
         this.powerUpTime = powerUpTime;
     }
 
-    public void collectPowerUp(PowerUp powerUp){
-        this.active = true;
+    public void collectPowerUp(PowerUp powerUp, Running runningEvent){
+        this.runningEvent = runningEvent;
+        this.runningEvent.startRunning();
         this.enhancedSpeed = powerUp.enhancedSpeed;
         this.dread = powerUp.dread;
         this.powerUpTime = powerUp.powerUpTime;
         Logger.generateLog(getClass().getName(), EventLog.startPowerUp(this.enhancedSpeed,this.dread,this.powerUpTime)
                 ,false,null);
+        new Counter(powerUpTime * 1000,this);
     }
 
     public void endPowerUp(){
-        this.active = false;
         this.enhancedSpeed = 0;
         this.dread = false;
         this.powerUpTime = 0;
@@ -38,5 +41,16 @@ public class PowerUp {
 
     public boolean isDread(){
         return dread;
+    }
+
+
+    @Override
+    public void counterNotify() {
+        endPowerUp();
+        this.runningEvent.stopRunning();
+    }
+
+    public int getEnhancedSpeed() {
+        return enhancedSpeed;
     }
 }

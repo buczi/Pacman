@@ -4,24 +4,8 @@ public enum Direction {
     Up,
     Down,
     Right,
-    Left;
-
-    public static Direction opposite(Direction direction) {
-        switch (direction) {
-            case Up:
-                return Down;
-
-            case Down:
-                return Up;
-
-            case Right:
-                return Left;
-
-            case Left:
-                return Right;
-        }
-        return Up;
-    }
+    Left,
+    None;
 
     public static Pair<Integer,Integer>getNext(Direction direction){
         switch (direction){
@@ -34,6 +18,18 @@ public enum Direction {
             case Left:
                 return new Pair<>(-1,0);
         }
-        return new Pair<>();
+        return new Pair<>(0,0);
+    }
+
+    public static Direction getDirection(int x, int y){
+        if(x == 0 && y == -1)
+            return Up;
+        else if (x == 0 && y == 1)
+            return Down;
+        else if ((x == -1 || x > 10) && y == 0)
+            return Left;
+        else if((x == 1 || x < -10) && y == 0)
+            return Right;
+        return None;
     }
 }

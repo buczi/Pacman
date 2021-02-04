@@ -1,12 +1,13 @@
 package file.logger;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Optional;
 
+/**
+ * Tracks down events in the code
+ */
 public class Logger {
     //For debug
     private final static boolean debug = true;
@@ -23,17 +24,32 @@ public class Logger {
             File dirFile = new File(dirPath);
 
             if (!dirFile.exists())
-                dirFile.mkdir();
+                if(!dirFile.mkdir())
+                {
+                    System.out.println("Make dir failed");
+                    System.exit(-1);
+                }
+
             path = (dirPath + "/appLog-" + dtf.format(now) + ".log");
             File some = new File(path);
             try {
-                some.createNewFile();
+                if(!some.createNewFile()){
+                    System.out.println("Make file failed");
+                    System.exit(-1);
+                }
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             }
         }
     }
 
+    /**
+     * Creates log after some type of event
+     * @param className where log is coming from
+     * @param message what happened
+     * @param exception was it an exception
+     * @param exceptionBody exception type
+     */
     public static void generateLog(String className, String message, boolean exception, LogException exceptionBody) {
         if(debug)
             if (exception)
@@ -45,7 +61,11 @@ public class Logger {
                         "\n" + "[" + eventNumber + "] " + "EVENT: " + message + "\n");
     }
 
-    //TODO throw some exception and in game timestamps
+
+    /**
+     * Writes message to log file
+     * @param message content of log
+     */
     public static void log(String message) {
         if (!debug || path == null)
             return;
@@ -57,5 +77,9 @@ public class Logger {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public static boolean getDebug(){
+        return debug;
     }
 }
