@@ -1,0 +1,9 @@
+a: 20
+n: 20
+da: 26
+waifu: 20
+awdwa: 20
+ubu: 20
+bob: 96
+none: 126
+a: 10

@@ -2,15 +2,26 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
 }
+apply plugin: 'idea'
 
 repositories {
     // Use JCenter for resolving dependencies.
-    jcenter()
+    //jcenter()
+    mavenCentral()
 }
 
 dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
     // Use JUnit test framework.
     testImplementation 'junit:junit:4.13'
+}
+
+dependencies{
+    implementation 'org.mockito:mockito-core:3.7.0'
+    testImplementation 'org.json:json:20180813'
+    implementation 'javax.json:javax.json-api:1.0'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    implementation 'com.google.code.gson:gson:2.7'
 }
 
 application {

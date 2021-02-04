@@ -1,2 +1,8 @@
+pacmantest/PacmanTest.java
+ pacmantest.PacmanTest
+general/GeneralTest.java
+ general.GeneralTest
+ghosttest/GhostTest.java
+ ghosttest.GhostTest
 earlytest/BaseTest.java
  earlytest.BaseTest

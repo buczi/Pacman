@@ -1,7 +1,7 @@
 package model.objects.pacman;
 
 import file.logger.Logger;
-import model.objects.EventLog;
+import model.events.EventLog;
 
 public class Points {
     int points;

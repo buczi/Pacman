@@ -1,0 +1,14 @@
+{
+  "speed" : "160",
+  "lives" : "1",
+  "maxTime" : "20",
+  "bSpeed" : "320",
+  "iSpeed" : "360",
+  "cSpeed" : "300",
+  "pSpeed" : "420",
+  "points" : "2",
+  "bPoints" : "50",
+  "enhancedSpeed" : "-40",
+  "dread" : true,
+  "time" : "7"
+}
