@@ -23,6 +23,7 @@ Levels differ in ghosts and pacman speed. Moreover the harder the difficulty the
 * D - Right
 * W - Up
 * Space - pause/unpause
+* Reset (Button) - reset level
 
 ### Ending game
 When pacmans lives are equal to zero the game stops. Player is asked to type his/her name and save. All scores can be found in score.txt file.
